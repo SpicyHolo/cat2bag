@@ -20,6 +20,8 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
+            'bag = cat2bag.cat2bag:main',
+            'publish = cat2bag.cat2publisher:main',
         ],
     },
 )
