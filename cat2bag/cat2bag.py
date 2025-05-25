@@ -25,7 +25,7 @@ class KittiVelodyneBagger(Node):
         self.basedir = self.declare_parameter('dataset_path', '/ros2_ws/KITTI/odometry').value
         self.lidar_topic_name = self.declare_parameter('lidar_topic_name', '/kitti/velodyne_points').value
         self.pose_topic_name = self.declare_parameter('pose_topic_name', '/kitti/pose').value
-        self.sequence = int(self.declare_parameter('sequence', '0').value)
+        self.sequence = self.declare_parameter('sequence', ).value
 
         # Initialize rosbag2 writer
         self.writer = SequentialWriter()
