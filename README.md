@@ -21,8 +21,24 @@ source install/setup.bash
 ```
 
 # Usage
+### KITTI Dataset file structure
+```
+├── KITTI
+│   └── odometry
+│       ├── poses // ground truth poses
+│       └── sequences
+│           ├── 00 
+│           ├── 01 
+│           ├── ...
+│           └── 21
+│               ├── velodyne
+│               ├── calib.txt
+│               └── times.txt
+```
+Make sure to merge calib and laser data archives to get `calib.txt` for each sequence.
+
 Path to KITTI dataset is set using ros2 run arguments,
-same for lidar topic, pose (ground truth) topic and chosen sequence (01-10)
+same for lidar topic, pose (ground truth) topic and chosen sequence (01-10) //
 Publisher (with 10Hz standard KITTI frequency)
 ```
 ros2 run cat2bag publish --ros-args \
