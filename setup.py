@@ -22,6 +22,7 @@ setup(
         'console_scripts': [
             'bag = cat2bag.cat2bag:main',
             'publish = cat2bag.cat2publisher:main',
+            'traj = cat2bag.cat2tum:main',
         ],
     },
 )
